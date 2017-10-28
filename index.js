@@ -4,8 +4,11 @@ module.exports = (robot) => {
   robot.on( 'release.published', async context => {
     var release = context.payload.release;
     var github = context.github;
+    var owner, repo;
 
-    console.log( release.author.login + ' released ' + release.tag_name + '!' );
+    [owner,repo] = context.payload.repository.full_name.split( '/' );
+
+    console.log( release.author.login + ' released ' + owner + '/' + repo + ' ' + release.tag_name + '!' );
 
     // probot semver expects a semver string to be present in the tag, with an optional prefix
     var matches = release.tag_name.match( /[0-9]+\.[0-9]+\.[0-9]+$/ );
@@ -15,10 +18,9 @@ module.exports = (robot) => {
       return;
     }
     var ver = matches[0];
-    var major, minor, patch, owner, repo;
+    var major, minor, patch;
 
     [major,minor,patch] = ver.split( '.' );
-    [owner,repo] = context.payload.repository.full_name.split( '/' );
 
     var next_major = ( parseInt( major, 10 ) + 1 ) + '.0.0';
     var next_minor = major + '.' + ( parseInt( minor, 10 ) + 1 ) + '.0';
