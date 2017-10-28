@@ -4,6 +4,10 @@
 
 ## Features
 
+When you push a tag:
+
+* If there are open issues in the corresponding milestone, an issue detailing them is automatically created and assigned to the user who pushed the tag.
+
 When you publish a [release](https://help.github.com/articles/creating-releases/):
 
 * The milestone for the release is automatically closed.

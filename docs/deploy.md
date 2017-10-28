@@ -6,4 +6,5 @@ This app requires these **Permissions & events** for the GitHub App:
 
 - Issues - **Read & Write**
 - Repository contents - **Read-only**
+  - [x] Check the box for **Create** events
   - [x] Check the box for **Release** events
