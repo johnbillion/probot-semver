@@ -1,5 +1,5 @@
 {
-  "name": "semver",
+  "name": "probot-semver",
   "version": "1.0.0",
   "description": "A Probot app that provides automatic semantic versioning support",
   "author": "John Blackbourn <johnbillion@gmail.com>",
