@@ -13,7 +13,13 @@ When you publish a [release](https://help.github.com/articles/creating-releases/
 * The milestone for the release is automatically closed.
 * Milestones for the next major, minor, and patch releases are automatically created, if they don't yet exist.
 
-## Setup
+## Installation
+
+This can be installed on your repository as a GitHub App: https://github.com/apps/probot-semver
+
+## Running Your Own Instance
+
+See [docs/deploy.md](docs/deploy.md) if you would like to run your own instance of this app.
 
 ```
 # Install dependencies
@@ -22,5 +28,3 @@ npm install
 # Run the bot
 npm start
 ```
-
-See [docs/deploy.md](docs/deploy.md) if you would like to run your own instance of this app.
